@@ -1,28 +1,28 @@
 // Selecting the html elements
-const seven = document.querySelector('.seven')
-const buttons = document.querySelectorAll('.btn')
+const seven = document.querySelector('.seven');
+const buttons = document.querySelectorAll('.btn');
 
-count = 7
+count = 7;
 
 // Adding event listener to the buttons
 buttons.forEach((button) => {
   button.addEventListener('click', (e) => {
-    let currentBtn = e.currentTarget.classList
+    let currentBtn = e.currentTarget.classList;
 
     if (currentBtn.contains('add')) {
-      count++
+      count++;
     } else if (currentBtn.contains('lower')) {
-      count--
+      count--;
     } else {
-      count = 0
+      count = 0;
     }
     // Adding range to the counter
     if (count <= 0 && currentBtn.contains('lower')) {
-      count = 0
+      count = 0;
     }
     if (count >= 50 && currentBtn.contains('add')) {
-      count = 50
+      count = 50;
     }
-    seven.textContent = count
+    seven.textContent = count;
   })
 })
